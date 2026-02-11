@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { supabase, subscribeToOrders, updateOrderStatus } from '../lib/supabase'
+import { supabase, subscribeToOrders, updateOrderStatus } from '@/lib/supabase'
 import { ChefHat, Clock, CheckCircle } from 'lucide-react'
 import toast, { Toaster } from 'react-hot-toast'
 

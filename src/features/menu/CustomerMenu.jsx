@@ -1,13 +1,12 @@
 import { useState, useEffect } from 'react'
-import { useRouter } from 'next/router'
-import { supabase, getMenuItems, getTableByToken, createOrder, createOrderItems } from '../lib/supabase'
+import { useSearchParams } from 'next/navigation'
+import { supabase, getMenuItems, getTableByToken, createOrder, createOrderItems } from '@/lib/supabase'
 import { ShoppingCart, Plus, Minus, Clock, CheckCircle } from 'lucide-react'
 import toast, { Toaster } from 'react-hot-toast'
 
 export default function CustomerMenu() {
-  const router = useRouter()
-  const { table } = router.query // table QR token from URL
-  
+  const searchParams = useSearchParams()
+  const table = searchParams.get('table') // table QR token from URL
   const [menuItems, setMenuItems] = useState([])
   const [cart, setCart] = useState([])
   const [tableData, setTableData] = useState(null)

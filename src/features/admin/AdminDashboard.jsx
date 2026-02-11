@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { supabase, getDailySales, getInventoryAlerts } from '../lib/supabase'
+import { supabase, getDailySales, getInventoryAlerts } from '@/lib/supabase'
 import { QRCodeSVG } from 'qrcode.react'
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts'
 import { Plus, Download, AlertTriangle, TrendingUp, DollarSign, Package } from 'lucide-react'
